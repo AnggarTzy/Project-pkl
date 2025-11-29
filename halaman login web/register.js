@@ -10,7 +10,7 @@ form.addEventListener('submit', function (e) {
 
   let valid = true;
 
-  // Validasi username
+  
   if (username === "") {
     newUserError.textContent = "Username tidak boleh kosong!";
     valid = false;
@@ -18,7 +18,7 @@ form.addEventListener('submit', function (e) {
     newUserError.textContent = "";
   }
 
-  // Validasi password
+  
   if (password === "") {
     newPassError.textContent = "Password tidak boleh kosong!";
     valid = false;
@@ -28,10 +28,10 @@ form.addEventListener('submit', function (e) {
 
   if (!valid) return;
 
-  // Simpan ke localStorage
+  
   const akunTersimpan = JSON.parse(localStorage.getItem("akun")) || [];
 
-  // Cek duplikat
+  
   const duplikat = akunTersimpan.find(user => user.username === username);
   if (duplikat) {
     alert("Username sudah digunakan, silakan pilih yang lain.");
@@ -42,5 +42,5 @@ form.addEventListener('submit', function (e) {
   localStorage.setItem("akun", JSON.stringify(akunTersimpan));
 
   alert("Registrasi berhasil! Silakan login.");
-  window.location.href = "register.html";
+  window.location.href = "login.html";
 });

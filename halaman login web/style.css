@@ -5,8 +5,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom right, #4facfe, #00f2fe);
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -14,60 +14,82 @@ body {
 }
 
 .login-container {
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background: #f9f9f9;
+  padding: 35px 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .login-container h2 {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   text-align: center;
   color: #333;
+  font-weight: 600;
 }
 
 .login-container input {
   width: 100%;
-  padding: 12px 15px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  padding: 14px 16px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 10px;
+  background-color: #eef1f7;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.login-container input:focus {
+  background-color: #dde3ec;
+  outline: none;
 }
 
 .login-container button {
   width: 100%;
-  padding: 12px;
-  margin-top: 20px;
-  background-color: #4facfe;
+  padding: 14px;
+  margin-top: 18px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
   border: none;
   color: white;
-  font-weight: bold;
-  border-radius: 8px;
+  font-weight: 600;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .login-container button:hover {
-  background-color: #00c6ff;
+  opacity: 0.9;
 }
 
 .login-container p {
   text-align: center;
-  margin-top: 15px;
-  font-size: 14px;
-  color: #666;
+  margin-top: 18px;
+  font-size: 13px;
+  color: #777;
 }
 
 .login-container a {
-  color: #4facfe;
-  text-decoration: none;
+  color: #667eea;
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 .error {
-  color: red;
-  font-size: 14px;
-  margin-top: -5px;
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: 5px;
   margin-bottom: 10px;
 }

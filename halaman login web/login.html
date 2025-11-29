@@ -5,22 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
   <link rel="stylesheet" href="style.css" />
+  <a href="home.html"></a>
 </head>
 <body>
   <div class="login-container">
     <h2>Login</h2>
-    <form id="loginForm">
-      <input type="text" id="Masukkan username" placeholder="Masukkan username" />
+    <form id="loginForm" autocomplete="off" novalidate>
+      <input type="text" id="username" placeholder="Masukkan username" />
       <div class="error" id="userError"></div>
 
-      <input type="Masukkan password" id="password" placeholder="Masukkan password" />
+      <input type="password" id="password" placeholder="Masukkan password" />
       <div class="error" id="passError"></div>
-
+ 
       <button type="submit">Masuk</button>
     </form>
-    <p>Belum punya akun? <a href="#">Daftar di sini</a></p>
+    <p>Belum punya akun? <a href="register.html">Buat akun</a></p>
   </div>
 
-  <script src="script.js"></script>
+  <script src="login.js"></script>
+  
 </body>
 </html>
